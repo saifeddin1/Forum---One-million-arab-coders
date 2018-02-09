@@ -1,5 +1,8 @@
 # allowed papers: 100, 50, 10, 5, and cents
+print("''''''''''''''''''''''''''''''''''''''''''''''''''''''")
+print('                   *ATM Money withdrawl*')
 
+print("''''''''''''''''''''''''''''''''''''''''''''''''''''''")
 def withdraw(balance, request):
 
     print("Current balance = " + str(balance))
