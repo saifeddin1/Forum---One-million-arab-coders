@@ -1,32 +1,47 @@
-money = 500
+# allowed papers: 100, 50, 10, 5, and cents
 
-request = 275
+def withdraw(balance, request):
 
-if request > money:
-    print("Can't give you all this money !!")
+    print("Current balance = " + str(balance))
 
-elif request < 0:
-    print("More than zero plz!")
+    result = balance
 
-else:
-    while request > 0:
+    if request > balance:
+        print("Can't give you all this money !!")
 
-        if request >= 100:
-            request -= 100
-            print("give 100")
+    elif request < 0:
+        print("More than zero plz!")
 
-        elif request >= 50:
-            request -= 50
-            print("give 50")
+    else:
+        result = balance - request
 
-        elif request >= 10:
-            request -= 10
-            print("give 10")
+        while request > 0:
 
-        elif request >= 5:
-            request -= 5
-            print("give 5")
+            if request >= 100:
+                request -= 100
+                print("give 100")
 
-        elif request < 5:
-            print("give " + str(request))
-            request = 0
+            elif request >= 50:
+                request -= 50
+                print("give 50")
+
+            elif request >= 10:
+                request -= 10
+                print("give 10")
+
+            elif request >= 5:
+                request -= 5
+                print("give 5")
+
+            elif request < 5:
+                print("give " + str(request))
+                request = 0
+
+    return result
+
+balance = 500
+
+balance = withdraw(balance, 277)
+balance = withdraw(balance, 30)
+balance = withdraw(balance, 5)
+balance = withdraw(balance, 500)
