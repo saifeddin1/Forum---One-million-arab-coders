@@ -19,7 +19,7 @@ class ATM():
 
 		print("===========================================")
 
-		result = self.balance
+		
 
 		if request > self.balance:
 
@@ -30,7 +30,7 @@ class ATM():
 			print("More than zero please!")
 
 		else:
-			result = self.balance - request
+			self.balance -= request
 			while request > 0:
 
 				if request >= 100:
@@ -50,7 +50,7 @@ class ATM():
 					request = 0
 		print("===========================================")
 
-		return result
+		return self.balance
 
 balance1 = 500
 balance2 = 1000
@@ -60,6 +60,10 @@ atm2 = ATM(balance2, "Baraka Bank")
 
 atm1.withdraw(277)
 atm1.withdraw(175)
+atm1.withdraw(800)
+
+atm2.withdraw(100)
+atm2.withdraw(2000)
 atm1.withdraw(800)
 
 atm2.withdraw(100)
