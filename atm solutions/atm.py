@@ -64,7 +64,7 @@ atm1.withdraw(800)
 
 atm2.withdraw(100)
 atm2.withdraw(2000)
-atm1.withdraw(800)
+atm2.withdraw(800)
 
 atm2.withdraw(100)
 atm2.withdraw(2000)
