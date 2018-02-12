@@ -8,35 +8,14 @@ print("''''''''''''''''''''''''''''''''''''''''''''''''''''''")
 
 class ATM():
 	def __init__(self, balance, bank_name):
-		
 		self.withdrawls_list = []
 		self.balance = balance
 		self.bank_name = bank_name
 
-	def withdraw(self, request):
-
-		print("Welcome to "+ self.bank_name)
-
-		print("Current balance = " + str(self.balance))
-
-		print("===========================================")
-
-			
-
-		if request > self.balance:
-
-			print("Sorry!Can't give you all this money!!")
-
-		elif request < 0:
-
-			print("More than zero please!")
-
-		else:
-			
-			self.withdrawls_list.append(request)	
-			self.balance -= request
-			while request > 0:
-
+	def proccess(self, request):
+		self.withdrawls_list.append(request)	
+		self.balance -= request
+		while request > 0:
 				if request >= 100:
 					request -= 100
 					print("Give 100")
@@ -52,12 +31,25 @@ class ATM():
 				else:
 					print("Give " + str(request))
 					request = 0
-		print("===========================================")
-
+					
+	def withdraw(self, request):
+		print("Welcome to "+ self.bank_name)
+		print("Current balance = " + str(self.balance))
+		print("====" * 10)	
+		
+		if request > self.balance:
+			print("Sorry!Can't give you all this money!!")
+		elif request < 0:
+			print("More than zero please!")
+		else:	
+			ATM.proccess(self, request)			
+		
+		print("====" * 10)
 		return self.balance
+
 	def show_withdrawls(self):
-	    for withdrawl in self.withdrawls_list:
-   	     print(withdrawl)
+	   	 for withdrawl in self.withdrawls_list:
+   		     print(withdrawl)
 
 balance1 = 500
 balance2 = 1000
