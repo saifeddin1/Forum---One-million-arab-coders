@@ -1,5 +1,5 @@
-from models import Member
-from models import Post
+from models import Member, Post
+
 
 member1 = Member("Mohamed", 15)
 member2 = Member("Karim", 25)
