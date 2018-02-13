@@ -3,7 +3,7 @@ class Member():
 		self.name = name
 		self.age = age
 class Post():
-	def __init__(self, title, topic):
+	def __init__(self, title, content):
 		self.title = title
-		self.topic = topic 
+		self.topic = content 
 	
