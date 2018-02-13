@@ -1,12 +1,12 @@
-from models import Member, Post
+import models
 
 
-member1 = Member("Mohamed", 15)
-member2 = Member("Karim", 25)
+member1 = models.Member("Mohamed", 15)
+member2 = models.Member("Karim", 25)
 
-post1 = Post("*Python", "Python Programming\n" *5)
-post2 = Post("*OOP", "Object Oriented Programming\n" *5)
-post3 = Post("*Nothing", "Nothing Here!\n" * 5)
+post1 = models.Post("*Python", "Python Programming\n" *5)
+post2 = models.Post("*OOP", "Object Oriented Programming\n" *5)
+post3 = models.Post("*Nothing", "Nothing Here!\n" * 5)
 #Starting
 print("******" * 15)
 print("                       One Million Arab Coders Forum (sample)")
