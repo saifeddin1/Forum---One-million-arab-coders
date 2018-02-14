@@ -17,7 +17,7 @@ class MemberStore():
 	
 	def getall(self):
 		for member in MemberStore.members:
-			return member
+			return self.members
 		
 
 	
@@ -29,5 +29,5 @@ class Post_store():
 		
 	def get_all():
 		for post in Post_store.posts:
-			return post
+			return self.posts
 		
