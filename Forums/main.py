@@ -1,5 +1,6 @@
 
-from models import Member, Post, MemberStore, Post_store
+from models import Member, Post
+from stores import MemberStore, Post_store
 
 
 member1 = Member("Mohamed", 15)
