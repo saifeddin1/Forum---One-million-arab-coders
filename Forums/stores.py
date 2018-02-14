@@ -5,13 +5,13 @@ class MemberStore():
 	def add(self, member):
 		MemberStore.members.append(member)
 	
-	def getall(self):
+	def get_all(self):
 		for member in MemberStore.members:
 			return self.members
 		
 
 	
-class Post_store():
+class PostStore():
 	posts = []
 	
 	def add(self, post):
