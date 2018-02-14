@@ -1,6 +1,6 @@
 
 from models import Member, Post
-from stores import MemberStore, Post_store
+from stores import MemberStore, PostStore
 
 
 member1 = Member("Mohamed", 15)
@@ -9,7 +9,7 @@ member2 = Member("Karim", 25)
 mymembers = MemberStore()
 mymembers = MemberStore()
 
-my_posts = Post_store()
+my_posts = PostStore()
 
 post1 = Post("*Python", "Python Programming\n" *5)
 post2 = Post("*OOP", "Object Oriented Programming\n" *5)
@@ -32,7 +32,7 @@ print(post3.title, "\n", post3.topic)
 
 mymembers.add(member1)
 mymembers.add(member2)
-mymembers.getall()
+mymembers.get_all()
 print(mymembers)
 
 my_posts.add(post1)
