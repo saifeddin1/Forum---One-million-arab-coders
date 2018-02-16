@@ -7,5 +7,9 @@ class Post():
 	def __init__(self, title, topic):
 		self.title = title
 		self.topic = topic 
+	
+	@staticmethod
+        def separator():		
+            	print("=" * 40)
 
 
