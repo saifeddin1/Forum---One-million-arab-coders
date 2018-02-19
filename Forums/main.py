@@ -8,8 +8,8 @@ import models
 from stores import MemberStore, PostStore
 
 #Creating members
-member1 = models.Member("Mohamed", 15)
-member2 = models.Member("Karim", 25)
+member1 = models.Member("Mohamed", 15, 1)
+member2 = models.Member("Karim", 25, 2)
 
 member_store = MemberStore()
 my_posts = PostStore()
@@ -37,11 +37,12 @@ print(post3.title, "\n", post3.topic)
 models.Post.separator()
 
 member_store.add(member1)
+print(member_store.get_by_id(1))
 member_store.add(member2)
+print(member_store.get_by_id(2))
+
 print(member_store.get_all())
 my_posts.add(post1)
 my_posts.add(post2)
 my_posts.add(post3)
 print(my_posts.get_all())
-print(my_posts.get_all)
-
